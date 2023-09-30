@@ -1,85 +1,97 @@
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-                        <!--Конфигурации-->
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
+<!doctype html>
+<html>
 
-                        <!--CSS стили-->
-        <link href="assets/css/main.css" rel="stylesheet">
-        <link href="assets/css/navbar-style.css" rel="stylesheet">
-        <link href="assets/css/navbar-style.css" rel="stylesheet">
-        <link href="assets/css/shop-card.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Rodina-RP</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script defer="defer" src="bundle.js"></script>
+    <link href="main.css" rel="stylesheet">
+</head>
 
-                        <!--JS стили-->
-        <script src="assets/js/slyder.js"></script>
-
-                        <!--Название стили-->
-        <title>VP - Сервера по Майнкрафту</title>
-    </head>
-    <body>
-        <div id="root">
-            <header class="mt-2 mb-6 flex h-10 items-center justify-between">
-                <div class="flex items-center gap-4">
-                    <a href="/" class="focusable flex items-center gap-2 rounded-xl text-2xl font-bold text-white">
-                        <img class="h-10 w-10" width="40" height="40" src="assets/img/logo.png" alt="">Vanilla Plus
-                    </a>
+<body></body>
+<div class="arizona-hud">
+    <div class="arizona-hud__player-info">
+        <div class="player-info">
+            <div class="player-info__server-info-bar" style="--server-flag:url(assets\/24\.png);">
+                <div class="player-info__server-info-bar-multiplyer"><span class="player-info__server-info-bar-multiplyer-value" id = "xpayday">X2</span></div>
+                <div class="player-info__user-stats">
+                    <div class="player-info__users-online"><i class="player-info__users-online-icon ui-man"></i>
+                        <div class="player-info__users-online-count" id="online" >0</div>
+                    </div>
+                    <div class="player-info__user-id"><span class="player-info__user-id-caption">ID:</span> <span class="player-info__user-id-value" id = "playerid">0</span></div>
                 </div>
-                <div class="hidden flex-row md:flex">
-                    <a href="/" class="flex justify-center font-medium px-4 transition-colors duration-150 active:text-white text-white">Главная</a>
-                    <a href="pages/products.html" class="flex justify-center font-medium px-4 transition-colors duration-150 active:text-white text-gray-200 hover:text-gray-100">Товары</a>
-                    <a href="pages/info.html" class="flex justify-center font-medium px-4 transition-colors duration-150 active:text-white text-gray-200 hover:text-gray-100">Информация</a>
-                        <div class="text-white navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-<a href="pages/auth/auth.html" class="focusable w-full rounded-2xl border-2 border-gray-300 py-4 px-8 text-lg text-white transition-colors hover:bg-gray-400">Войти
-    </a>
-  </form>
-<a></a>
-        </ul>
+                <div class="player-info__project-logo"><img alt="logo" class="player-info__project-logo-image" src="assets/111.png"></div>
+                <div class="player-info__project">
+                    <div class="player-info__project-name">Arizona</div>
+                    <div class="player-info__project-name-caption">Role play</div>
+                </div>
+                <div class="player-info__server">
+                    <div class="player-info__server-number">1</div>
+                    <div class="player-info__server-name" id = "server">None</div>
+                </div>
             </div>
-            </header>
-                <div class="white-text">
-                    Уникальный игровой опыт<br>на серверах VanillaPlus
+            <div class="player-info__params">
+
+
+
+                <div class="player-info__indicators">
+                    <div class="player-info__indicator">
+                        <div class="circle-indicator"  style="--svg-width:50px; --icon-color:#FF1D38;">
+                            <div class="circle-indicator__lines"><svg  id="health-bar" class="circle-indicator__svg-zone" style="--dashoffset:141.372; --dasharray:141.372;">
+                                    <circle class="circle-indicator__total" cx="25" cy="25" r="22.5"></circle>
+                                    <circle class="circle-indicator__current" cx="25" cy="25" r="22.5"></circle>
+                                </svg></div>
+                            <div class="circle-indicator__light"></div> <i class="circle-indicator__icon ui-heart"></i> <i class="circle-indicator__wave-icon ui-wave"></i>
+                            <p class="circle-indicator__count" id="health-value" >0 </p>
+                        </div>
+                    </div>
+                    <div class="player-info__indicator">
+                        <div class="circle-indicator" style="--svg-width:50px; --icon-color:#FFFFFF;">
+                            <div class="circle-indicator__lines"><svg  id="armorbar" class="circle-indicator__svg-zone" style="--dashoffset:141.372; --dasharray:141.372;">
+                                    <circle class="circle-indicator__total" cx="25" cy="25" r="22.5"></circle>
+                                    <circle class="circle-indicator__current" cx="25" cy="25" r="22.5"></circle>
+                                </svg></div>
+                            <div class="circle-indicator__light"></div> <i class="circle-indicator__icon ui-armor"></i> <i class="circle-indicator__wave-icon ui-wave"></i>
+                            <p class="circle-indicator__count" id="armor-value" >0 </p>
+                        </div>
+                    </div>
+
+                    <div class="player-info__indicator">
+                        <div class="circle-indicator" style="--svg-width:50px; --icon-color:#F48A28;">
+                            <div class="circle-indicator__lines"><svg id ="eda-bar" class="circle-indicator__svg-zone" style="--dashoffset:141.372; --dasharray:141.372;">
+                                    <circle class="circle-indicator__total" cx="25" cy="25" r="22.5"></circle>
+                                    <circle class="circle-indicator__current" cx="25" cy="25" r="22.5"></circle>
+                                </svg></div>
+                            <div class="circle-indicator__light"></div> <i class="circle-indicator__icon ui-burger"></i> <i class="circle-indicator__wave-icon ui-wave"></i>
+                            <p class="circle-indicator__count"  id="eda-value">0 </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="actionbar-text">
-                    Начините свою захватывающую игру на наших серверах
+
+
+                <div class="player-info__gun"><img id="ammo" src="assets/fist.png" alt="gun" class="player-info__gun-image">
+                    <div class="player-info__loaded-ammo" id="weapon">
+                        100
+                        <div class="player-info__total-ammo" id="max-weapon">
+                          /100
+                        </div>
+                      </div>                      
                 </div>
-                <button class="rounded-button">Начать игру!</button>
-                <div class='container'>
-<div class="white-text">
-    Фотографии с сервера
-</div>
-<div class="ism-slider" data-transition_type="fade" data-play_type="once" data-radios="false" id="my-slider">
-    <ol>
-         <li>
-           <img src="assets/img/slider/slider1.png">
-                        </li>
-                         <li>
-                              <img src="assets/img/slider/slider2.png">
-                        </li>
-                         <li>
-                         <img src="assets/img/slider/slider3.png">
-                  </li>
-                </ol>
             </div>
-        </div>
-        <div class="container mx-auto">
-    <div class="p-5 bg-gray-200 rounded-lg py-12 m-5">
-        <div class="flex flex-col ">
-            <h3 class="text-2xl leading-10 text-blue-800 w-full text-center font-bold">© VANILLA PLUS 2021-2023</h3>
+            <div class="player-info__player-stats">
+                <div id="suspect-block" class="player-info__player-wanted">
+                    <div class="player-info__blue-light">&nbsp;</div> <span class="player-info__player-watned-star" id="wanted-level" >3</span>
+                    <div class="player-info__player-wanted-caption">В розыске!</div>
+                </div>
+            <div class="player-info__player-stats">
+                <div class="player-info__player-money"><span class="player-info__dollar-icon"><span class="player-info__symbol">&nbsp;$&nbsp;</span></span> <span class="player-info__total" id="cash" >0</span></div>
+            </div>
         </div>
     </div>
-        <div class="font-bold text-blue-700 content-center">
-            <ul class="flex flex-row space-x-6 py-4 justify-center">
-                <li>
-                    <a href="pages/info.html" class="hover:underline cursor-pointer">Информация</a>
-                </li>
-            </ul>
-        </div>
-            </ul>
-        </div>
-    </div>
 </div>
-    </body>
+<style>
+
+</style>
+<script src="js.js"></script>
 </html>
